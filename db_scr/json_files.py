@@ -1,10 +1,9 @@
 from models import Author, Quote
 import json
-from connect import connect
 
 
 def load_authors_from_file():
-    with open('json_files/authors.json', 'r') as file:
+    with open('../json_files/authors.json', 'r') as file:
         data = json.load(file)
 
     for record in data:
@@ -15,7 +14,7 @@ def load_authors_from_file():
         author.save()
 
 def load_quotes_from_file():
-    with open('json_files/quotes.json', 'r') as file:
+    with open('../json_files/quotes.json', 'r') as file:
         data = json.load(file)
 
     for record in data:
